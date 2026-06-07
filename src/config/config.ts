@@ -33,10 +33,10 @@ interface Config {
 
 }
 const config: Config = {
-    port: Number(process.env.PORT) || 3000,
+    port: Number(process.env.PORT) || 8000,
     nodeEnv: process.env.NODE_ENV || "development",
     mongo_uri: process.env.MONGO_URI!,
-    frontend_uri: process.env.FRONTEND_URI || 'http://localhost',
+    frontend_uri: process.env.FRONTEND_URI || 'https://meditracksystem.netlify.app',
     mail: {
         mail_from: process.env.EMAIL_FROM || "",
         smtp: {
