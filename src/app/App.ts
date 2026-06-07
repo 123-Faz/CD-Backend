@@ -60,10 +60,11 @@ class App {
         createStorageFolders()
     }
     startServer() {
-        this.server.listen(this.port, () => {
-            console.log(`[Server]: Running on http://127.0.0.1:${this.port}`);
+        this.server.listen(this.port, "0.0.0.0", () => {
+            console.log(`[Server]: Running on http://0.0.0.0:${this.port}`);
 
         })
     }
 }
 export default App
+
