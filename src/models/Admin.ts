@@ -1,4 +1,4 @@
-import { Document, model, ObjectId, Schema } from "mongoose";
+import { Document, model, Types, Schema } from "mongoose";
 import validator from "validator"
 import { hashPassword } from "../modules/bcrypt.module";
 import { generateToken } from "../services/token.service";
@@ -9,7 +9,7 @@ export enum AdminRole {
     super = "super"
 }
 interface IAdmin extends Document {
-    _id: ObjectId;
+    _id: Types.ObjectId;
     username: string;
     email: string;
     password: string;

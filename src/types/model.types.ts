@@ -1,4 +1,4 @@
-import { Document, ObjectId } from "mongoose"
+import { Document, ObjectId, Types } from "mongoose"
 
 export enum Role {
     admin = "admin",
@@ -6,7 +6,7 @@ export enum Role {
 }
 
 export interface IUser extends Document {
-    _id: ObjectId;
+    _id: Types.ObjectId;
     username: string;
     email: string;
     name?: string;
