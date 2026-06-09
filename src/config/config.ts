@@ -36,7 +36,7 @@ const config: Config = {
     port: Number(process.env.PORT) || 8080,
     nodeEnv: process.env.NODE_ENV || "development",
     mongo_uri: process.env.MONGO_URI!,
-    frontend_uri: process.env.FRONTEND_URI || 'https://meditracksystem.netlify.app',
+    frontend_uri: process.env.FRONTEND_URI || 'https://complaindesk.netlify.app/',
     mail: {
         mail_from: process.env.EMAIL_FROM || "",
         smtp: {
