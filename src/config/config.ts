@@ -36,7 +36,7 @@ const config: Config = {
     port: Number(process.env.PORT) || 8080,
     nodeEnv: process.env.NODE_ENV || "development",
     mongo_uri: process.env.MONGO_URI!,
-    frontend_uri: process.env.FRONTEND_URI || 'https://complaindesk.netlify.app/',
+    frontend_uri: process.env.FRONTEND_URI?.replace(/\/+$/, "") || 'https://complaindesk.netlify.app',
     mail: {
         mail_from: process.env.EMAIL_FROM || "",
         smtp: {
@@ -57,8 +57,8 @@ const config: Config = {
     },
     tokens: {
         jwt_secret: process.env.JWT_SECRET || "",
-        jwt_refresh_secret: process.env.ADMIN_JWT_SECRET || "",
-        admin_jwt_secret: process.env.JWT_REFRESH_SECRET || "",
+        jwt_refresh_secret: process.env.JWT_REFRESH_SECRET || "",
+        admin_jwt_secret: process.env.ADMIN_JWT_SECRET || "",
     }
 
 }
